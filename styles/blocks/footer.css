@@ -1,0 +1,137 @@
+.footer {}
+
+.footer-top {
+  padding: 40px;
+  background: rgb(237, 231, 52);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-top__title {
+  font-size: 26px;
+  font-family: var(--font-bold);
+  text-transform: uppercase;
+}
+
+.footer-top__button {
+  display: flex;
+  background: #000;
+  align-items: center;
+  padding: 5px 15px;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.footer-top__button span {
+  color: #fff;
+  font-size: 16px;
+  font-family: var(--font-regular);
+}
+
+.footer-top__button img {
+  width: 30px;
+}
+
+/* --- */
+
+.footer-middle {
+  width: 100%;
+  max-width: 1010px;
+  margin: 20px auto 0;
+}
+
+.footer-middle-lists {
+  display: flex;
+  flex-direction: row;
+}
+
+.lists-el {
+  padding: 20px 15px 30px;
+}
+
+.lists-title {
+  font-size: 17px;
+  font-family: var(--font-middle);
+  padding-bottom: 10px;
+}
+
+.list-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.list-links li a {
+  font-size: 14px;
+  font-family: var(--font-light);
+}
+
+.list-links li a:hover {
+  border-bottom: 1px solid #000;
+}
+
+.list-links.icon li a:hover {
+  border-bottom: none;
+}
+
+/* --- */
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  background: #282c31;
+  border-top: 1px solid #767677;
+}
+
+.footer-bottom-menu {
+  width: 100%;
+  max-width: 1010px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu-el {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  padding: 0 15px;
+}
+
+.menu-el:first-child {
+  gap: 10px;
+}
+
+.menu-el:nth-child(2) {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.menu-el a {
+  font-size: 14px;
+  font-family: var(--font-light);
+  color: #d7e6e6;
+}
+
+.menu-el img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.footer-bottom-colophon {
+  display: flex;
+  justify-content: center;
+  padding: 20px 15px 0;
+}
+
+.footer-bottom-colophon span {
+  font-size: 12px;
+  font-family: var(--font-light);
+  color: #d7e6e6;
+}
