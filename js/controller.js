@@ -23,6 +23,8 @@ const controller = event => {
       ? button.classList.remove('active-button')
       : 0
   })
+
+  checkLiked()
 }
 
 headerButtonsArray.forEach(button =>
@@ -39,13 +41,6 @@ function openProfile() {
 function openWishlist() {
   const renderSection = `
    <main class="wishlist" id='wishlist' data-active="active">WISHLIST</main>
-  `
-  header.insertAdjacentHTML('afterend', renderSection)
-}
-
-function openBag() {
-  const renderSection = `
-   <main class="bag" id='bag' data-active="active">BAG</main>
   `
   header.insertAdjacentHTML('afterend', renderSection)
 }

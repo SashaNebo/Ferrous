@@ -114,8 +114,8 @@ const renderMain = () => {
       mainContainer.insertAdjacentHTML('beforeend', mainProductHTML)
     })
   }
-
   renderMainProduct()
+  checkLiked()
 }
 
 renderMain()
