@@ -3,6 +3,7 @@ window.addEventListener('click', event => {
   const activeSection = event.target.closest('[data-active="active"]')
   if (activeSection === null) return
   const selectedProduct = event.target.closest('[data-id]')
+  if (selectedProduct === null) return
 
   if (
     activeSection.id === 'product' ||
@@ -290,5 +291,9 @@ window.addEventListener('click', event => {
     renderMain()
   }
 
-  selectedProduct ? renderProduct() : 0
+  if (activeSection.id === 'bag') {
+    event.target.closest('[data-img]') ? renderProduct() : 0
+  } else {
+    renderProduct()
+  }
 })

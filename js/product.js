@@ -14,6 +14,7 @@ const product = [
     colors: '2 colors available',
     size: 11,
     count: 1,
+    inBag: false,
     liked: false,
   },
   {
@@ -31,6 +32,7 @@ const product = [
     colors: '11 colors available',
     size: 11,
     count: 1,
+    inBag: false,
     liked: false,
   },
   {
@@ -48,6 +50,7 @@ const product = [
     colors: '4 colors available',
     size: 11,
     count: 1,
+    inBag: false,
     liked: false,
   },
   {
@@ -65,6 +68,7 @@ const product = [
     colors: '8 colors available',
     size: 11,
     count: 1,
+    inBag: false,
     liked: false,
   },
   {
@@ -82,6 +86,7 @@ const product = [
     colors: '6 colors available',
     size: 11,
     count: 1,
+    inBag: false,
     liked: false,
   },
   {
@@ -99,6 +104,7 @@ const product = [
     colors: '5 colors available',
     size: 11,
     count: 1,
+    inBag: false,
     liked: false,
   },
   {
@@ -116,6 +122,7 @@ const product = [
     colors: '11 colors available',
     size: 11,
     count: 1,
+    inBag: false,
     liked: false,
   },
   {
@@ -133,6 +140,7 @@ const product = [
     colors: '7 colors available',
     size: 11,
     count: 1,
+    inBag: false,
     liked: false,
   },
 ]

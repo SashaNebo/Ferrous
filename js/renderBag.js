@@ -1,5 +1,3 @@
-const bagItems = []
-
 const openBag = () => {
   const bagContainerHTML = `
    <div class="bag" id="bag" data-active="active">
@@ -222,7 +220,8 @@ const openBag = () => {
   header.insertAdjacentHTML('afterend', bagContainerHTML)
 
   const bagContainer = document.querySelector('.bag-left-items')
-  bagItems.forEach(item => {
+  product.forEach(item => {
+    if (!item.inBag) return
     const bagProductHTML = `
       <div class="bag-items-content" data-id="${item.id}">
         <div class="bag-buttons">
@@ -248,7 +247,7 @@ const openBag = () => {
                 <svg width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Edit / Add_To_Queue"> <path id="Vector" d="M3 9V19.4C3 19.9601 3 20.2399 3.10899 20.4538C3.20487 20.642 3.35774 20.7952 3.5459 20.8911C3.7596 21 4.0395 21 4.59846 21H15.0001M14 13V10M14 10V7M14 10H11M14 10H17M7 13.8002V6.2002C7 5.08009 7 4.51962 7.21799 4.0918C7.40973 3.71547 7.71547 3.40973 8.0918 3.21799C8.51962 3 9.08009 3 10.2002 3H17.8002C18.9203 3 19.4801 3 19.9079 3.21799C20.2842 3.40973 20.5905 3.71547 20.7822 4.0918C21.0002 4.51962 21.0002 5.07969 21.0002 6.19978L21.0002 13.7998C21.0002 14.9199 21.0002 15.48 20.7822 15.9078C20.5905 16.2841 20.2842 16.5905 19.9079 16.7822C19.4805 17 18.9215 17 17.8036 17H10.1969C9.07899 17 8.5192 17 8.0918 16.7822C7.71547 16.5905 7.40973 16.2842 7.21799 15.9079C7 15.4801 7 14.9203 7 13.8002Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
               </div>
             </div>
-            <img src="${item.imgSrc[5]}" alt="">
+            <img src="${item.imgSrc[5]}" data-img="${item.id}"alt="">
             <div class="bag-items-content-right">
               <div class="content-items-in">
                 <div class="bag-items-content__top">
@@ -317,19 +316,11 @@ const addToBag = event => {
   })
 
   const createBagArray = () => {
-    if (bagItems.length === 0) {
-      bagItems.push(activeInfo)
-    } else if (bagItems.length > 0) {
-      if (bagItems.includes(activeInfo)) {
-        bagItems.forEach(infoBag => {
-          if (infoBag === activeInfo) {
-            infoBag.count++
-          }
-        })
-      } else if (!bagItems.includes(activeInfo)) {
-        bagItems.push(activeInfo)
+    product.forEach(item => {
+      if (item === activeInfo) {
+        !item.inBag ? (item.inBag = true) : item.count++
       }
-    }
+    })
   }
 
   createBagArray()
@@ -338,8 +329,8 @@ const addToBag = event => {
 }
 
 const countBagButton = () => {
-  const countBag = bagItems.reduce((counter, item) => {
-    counter += item.count
+  const countBag = product.reduce((counter, item) => {
+    item.inBag ? (counter += item.count) : 0
     return counter
   }, 0)
 
@@ -351,11 +342,13 @@ const countBagButton = () => {
 }
 
 const calcAmount = () => {
-  const amount = bagItems.reduce((acc, info) => {
-    let price = ''
-    let priceA = info.price.split('')
-    priceA.forEach((char, i) => (i > 0 ? (price += char) : 0))
-    acc += +price * info.count
+  const amount = product.reduce((acc, info) => {
+    if (info.inBag) {
+      let price = ''
+      let priceA = info.price.split('')
+      priceA.forEach((char, i) => (i > 0 ? (price += char) : 0))
+      acc += +price * info.count
+    }
     return acc
   }, 0)
 
