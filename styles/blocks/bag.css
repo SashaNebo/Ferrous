@@ -126,6 +126,7 @@ p .bag-info-price,
 .bag-buttons .bag-buttons-remove,
 .bag-buttons-like {
   cursor: pointer;
+  display: flex;
 }
 
 .bag-items-content-right {

@@ -37,10 +37,3 @@ function openProfile() {
   `
   header.insertAdjacentHTML('afterend', renderSection)
 }
-
-function openWishlist() {
-  const renderSection = `
-   <main class="wishlist" id='wishlist' data-active="active">WISHLIST</main>
-  `
-  header.insertAdjacentHTML('afterend', renderSection)
-}

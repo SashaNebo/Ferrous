@@ -8,7 +8,7 @@ const openBag = () => {
           <h1 class="bag-left-title">YOUR BAG</h1>
         </div>
           <div class="bag-left-info">
-            <p class="bag-info-price"><span class="col">TOTAL: ({counterBag} items)</span><span class="price"> $${calcAmount()}</span></p>
+            <p class="bag-info-price"><span class="col">TOTAL: (${countBagButton()} items)</span><span class="price"> $${calcAmount()}</span></p>
             <p class="bag-info-yours">Items in your bag are not reserved — check out now to make them yours.</p>
           </div>
           <div class="bag-left-shipping">
