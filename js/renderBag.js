@@ -253,21 +253,13 @@ const openBag = () => {
                 <div class="bag-items-content__top">
                   <div class="w">
                     <div class="bag-items-content__top-name">${item.title}</div>
-                    <div class="bag-items-content__top-price">${
-                      item.price
-                    }</div>
-                  </div>
-                  <div class="w">
-                    <div class="bag-items-content__total-txt">Total price</div>
-                    <div class="bag-items-content__total-price">$${calcAmount()}</div>
+                    <div class="bag-items-content__top-price">${item.price}</div>
                   </div>
                     <div class="bag-items-content__color">${item.colors}</div>
                   <div class="bag-items-content__size">SIZE: 11 (US Men)</div>
                 </div>
                 <div class="bag-items-count">
-                  <div class="bag-items-count__col"><span>${
-                    item.count
-                  }</span></div>
+                  <div class="bag-items-count__col"><span>${item.count}</span></div>
                   <div class="bag-items-count-btns">
                     <button class="bag-items-count-btns__minus" data-counter="minus">
                       <svg width="20px" height="20px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" stroke-width="10.24">
@@ -304,6 +296,9 @@ const openBag = () => {
     `
     bagContainer.insertAdjacentHTML('afterbegin', bagProductHTML)
   })
+
+  const counterButtons = Array.from(document.querySelectorAll('[data-counter]'))
+  counterButtons.forEach(b => b.addEventListener('click', quanityBagController))
 }
 
 const addToBag = event => {
@@ -353,4 +348,28 @@ const calcAmount = () => {
   }, 0)
 
   return amount
+}
+
+const quanityBagController = event => {
+  const activeSection = event.target.closest('[data-active="active"]')
+  const currentProduct = event.target.closest('[data-id]')
+  const counterButton = event.target.closest('[data-counter]')
+
+  product.forEach(item => {
+    if (item.id === +currentProduct.dataset.id) {
+      if (counterButton.dataset.counter === 'plus') {
+        item.count++
+        activeSection.remove()
+        openBag()
+      }
+
+      if (counterButton.dataset.counter === 'minus') {
+        if (item.count > 1) {
+          item.count--
+          activeSection.remove()
+          openBag()
+        }
+      }
+    }
+  })
 }
