@@ -30,10 +30,3 @@ const controller = event => {
 headerButtonsArray.forEach(button =>
   button.addEventListener('click', controller)
 )
-
-function openProfile() {
-  const renderSection = `
-   <main class="profile" id='profile' data-active="active">PROFILE</main>
-  `
-  header.insertAdjacentHTML('afterend', renderSection)
-}

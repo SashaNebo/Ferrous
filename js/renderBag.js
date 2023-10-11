@@ -304,7 +304,6 @@ const openBag = () => {
 
 const addToBag = event => {
   let activeInfo
-  const activeSection = event.target.closest('[data-active="active"]')
   const currentProduct = event.target.closest('[data-id]')
   const currentId = +currentProduct.dataset.id
 
