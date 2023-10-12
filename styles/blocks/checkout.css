@@ -1,0 +1,31 @@
+.checkout {
+  margin: 50px 0;
+}
+
+.checkout-container {
+  width: 100%;
+  max-width: 1570px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.checkout-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.checkout-title {
+  font-size: 28px;
+  font-family: var(--font-medium);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.checkout-subtitle {
+  font-size: 15px;
+  font-family: var(--font-regular);
+  color: #767677;
+  margin-top: 10px;
+  letter-spacing: .1em;
+}

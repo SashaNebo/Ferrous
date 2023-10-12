@@ -275,50 +275,50 @@ p .bag-info-price,
 
 /* --- */
 
-.checkout {
+.bag-checkout {
   width: 85%;
   margin-left: auto;
   /* animation: moveRight 1s ease-in-out; */
 }
 
-.checkout-content {
+.bag-checkout-content {
   width: 75%;
 }
 
-.checkout-buttons {
+.bag-checkout-buttons {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.checkout-btn {
+.bag-checkout-btn {
   border: 1px solid #000;
 }
 
-.checkout-btn {
+.bag-checkout-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
 }
 
-.checkout-btn:hover {
+.bag-checkout-btn:hover {
   opacity: .8;
   transition: .2s;
 }
 
-.checkout-btn:first-child {
+.bag-checkout-btn:first-child {
   background: #000;
 }
 
-.checkout-btn .txt {
+.bag-checkout-btn .txt {
   color: #fff;
   font-size: 16px;
   font-family: var(--font-medium);
   text-transform: uppercase;
 }
 
-.checkout-order-info {
+.bag-checkout-order-info {
   margin-top: 60px;
 }
 
@@ -329,7 +329,7 @@ p .bag-info-price,
   margin-bottom: 30px;
 }
 
-.checkout-order-info .w {
+.bag-checkout-order-info .w {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -374,17 +374,17 @@ p .bag-info-price,
   transition: all .15s linear;
 }
 
-.checkout-payments {
+.bag-checkout-payments {
   margin-top: 40px;
 }
 
-.checkout-payments .payments-title {
+.bag-checkout-payments .payments-title {
   font-size: 12px;
   font-family: var(--font-regular);
   letter-spacing: .2em;
 }
 
-.checkout-payments .payments-icons {
+.bag-checkout-payments .payments-icons {
   display: flex;
   gap: 7px;
   margin-top: 10px;

@@ -66,10 +66,10 @@ const openBag = () => {
             </div>
           </div>
         </div>
-        <div class="checkout">
-          <div class="checkout-content">
-            <div class="checkout-buttons">
-              <button class="checkout-btn">
+        <div class="bag-checkout">
+          <div class="bag-checkout-content">
+            <div class="bag-checkout-buttons">
+              <button class="bag-checkout-btn">
                 <span class='txt'>checkout</span>
                 <span class='icon'>
                   <svg width="30px" height="30px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)" stroke="#000000" stroke-width="0.00024000000000000003">
@@ -83,7 +83,7 @@ const openBag = () => {
                   </svg>
                 </span>
               </button>
-              <button class="checkout-btn">
+              <button class="bag-checkout-btn">
                 <span class='icon'>
                   <svg width="61" height="24" viewBox="0 0 61 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_4322_96218)">
@@ -118,7 +118,7 @@ const openBag = () => {
                 </span>
               </button>
             </div>
-            <div class="checkout-order-info">
+            <div class="bag-checkout-order-info">
               <h1 class="order-info__title">order summary</h1>
               <div class="w">
                 <div class="order-info__el">
@@ -144,11 +144,11 @@ const openBag = () => {
                 <span class='txt'>USE A PROMO CODE</span>
               </div>
             </div>
-            <div class="checkout-payments">
+            <div class="bag-checkout-payments">
               <h6 class="payments-title">ACCEPTED PAYMENT METHODS</h6>
               <div class="payments-icons">
                 <span>
-                  <svg width="85" height="24" viewBox="0 0 85 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="60" height="24" viewBox="0 0 85 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M55.0667 0C49.1024 0 43.7724 2.72607 43.7724 7.76268C43.7724 13.5387 53.2254 13.9376 53.2254 16.8393C53.2254 18.0611 51.6375 19.1548 48.9256 19.1548C45.0768 19.1548 42.2002 17.6266 42.2002 17.6266L40.9694 22.7091C40.9694 22.7091 44.2831 24 48.6827 24C55.2036 24 60.3348 21.14 60.3348 16.0174C60.3348 9.91397 50.8425 9.52685 50.8425 6.83363C50.8425 5.8764 52.1459 4.82775 54.8501 4.82775C57.9012 4.82775 60.3906 5.9392 60.3906 5.9392L61.5952 1.03041C61.5952 1.03041 58.8866 0 55.0667 0ZM0.498949 0.37051L0.354492 1.11145C0.354492 1.11145 2.86373 1.51637 5.12366 2.32419C8.03347 3.25043 8.24082 3.7897 8.73087 5.46451L14.071 23.6179H21.2298L32.2583 0.37051H25.116L18.0296 16.1765L15.1379 2.77856C14.8727 1.24521 13.5294 0.37051 11.8851 0.37051H0.498949ZM35.1302 0.37051L29.5274 23.6178H36.3381L41.9213 0.370435H35.1302V0.37051ZM73.116 0.37051C71.4737 0.37051 70.6035 1.14586 69.965 2.50074L59.9868 23.6178H67.1291L68.511 20.0983H77.2122L78.0526 23.6178H84.3545L78.8567 0.37051H73.116ZM74.0449 6.65123L76.1619 15.3748H70.4901L74.0449 6.65123Z"
                       fill="#1434CB" />
@@ -461,15 +461,14 @@ const quanityBagController = event => {
 }
 
 const moveModal = event => {
-  const activeSection = document.querySelector('[data-active="active"]')
-  const modal = document.querySelector('#modal')
-  const buttonViewBag = event.target.closest('.view-bag-btn')
-
-  if (buttonViewBag) {
-    modal.remove()
-    activeSection.remove()
+  if (
+    !event.target.closest('.modal__box') ||
+    event.target.closest('.modal-close')
+  ) {
+    document.querySelector('#modal').remove()
+  } else if (event.target.closest('.view-bag-btn')) {
+    document.querySelector('#modal').remove()
+    bagBtn.classList.add('active-button')
     openBag()
   }
-
-  modal || event.target.closest('.modal-close') ? modal.remove() : 0
 }
