@@ -410,6 +410,7 @@ const addToBag = event => {
   renderBagModal()
   countBagButton()
   calcAmount()
+  saveToLocalStorage()
 }
 
 const countBagButton = () => {
@@ -461,24 +462,5 @@ const quanityBagController = event => {
       }
     }
   })
-}
-
-const moveModal = event => {
-  const modal = document.querySelector('#modal')
-  if (
-    !event.target.closest('.modal__box') ||
-    event.target.closest('.modal-close')
-  ) {
-    modal.remove()
-  } else if (event.target.closest('.view-bag-btn')) {
-    modal.remove()
-    document.querySelector('[data-active]').remove()
-    openBag()
-    bagButton.classList.add('active-button')
-  } else if (event.target.closest('.join-free-btn')) {
-    modal.remove()
-    document.querySelector('[data-active]').remove()
-    openProfile()
-    profileButton.classList.add('active-button')
-  }
+  saveToLocalStorage()
 }

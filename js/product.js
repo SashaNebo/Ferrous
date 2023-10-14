@@ -1,4 +1,4 @@
-const product = [
+let product = [
   {
     id: 1,
     title: 'ADIDAS BY STELLA MCCARTNEY ULTRABOOST SPEED',

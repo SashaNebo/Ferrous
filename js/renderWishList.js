@@ -17,6 +17,7 @@ window.addEventListener('click', event => {
     : selectedWishButton.classList.remove('active')
 
   countWishlistButton()
+  saveToLocalStorage()
 })
 
 const openWishlist = () => {

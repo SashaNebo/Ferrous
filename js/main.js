@@ -4,3 +4,15 @@ const headerButtonsArray = Array.from(document.querySelectorAll('.menu-btn'))
 const profileButton = header.querySelector('#btnToProfile')
 const wishlistButton = header.querySelector('#btnToWishList')
 const bagButton = header.querySelector('#btnToBag')
+
+if (localStorage.getItem('product')) {
+  product = JSON.parse(localStorage.getItem('product'))
+  countWishlistButton()
+  countBagButton()
+
+  console.log(product)
+}
+
+const saveToLocalStorage = () => {
+  localStorage.setItem('product', JSON.stringify(product))
+}

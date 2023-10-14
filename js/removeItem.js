@@ -32,4 +32,6 @@ window.addEventListener('click', event => {
   event.target.closest('.wish-button')
     ? removeItem()
     : 0
+
+  saveToLocalStorage()
 })
