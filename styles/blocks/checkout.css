@@ -141,17 +141,17 @@
   margin-top: 10px;
 }
 
-.user-address-agreement {
+.data-user-agreement {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
 }
 
-.address-agreement-box {
+.user-agreement-box {
   margin: 20px 0;
 }
 
-.address-agreement-form {
+.user-agreement-form {
   position: relative;
 }
 
@@ -202,6 +202,28 @@
 
 .agreement__input:checked+.agreement__label::after {
   opacity: 1;
+}
+
+.data-user-button {
+  width: 50%;
+  border: 1px solid #000;
+  text-align: left;
+  margin: 30px 0;
+  padding: 15px;
+  background: #000;
+  transition: .2s linear;
+}
+
+.data-user-button:hover {
+  opacity: .8;
+  transition: .2s linear;
+}
+
+.data-user-button span {
+  font-size: 18px;
+  font-family: var(--font-medium);
+  text-transform: uppercase;
+  color: #fff;
 }
 
 
