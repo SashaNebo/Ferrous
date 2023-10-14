@@ -1,5 +1,5 @@
 .checkout {
-  margin: 50px 0;
+  margin: 100px 0 200px;
 }
 
 .checkout-container {
@@ -206,26 +206,55 @@
 
 .data-user-button {
   width: 50%;
-  border: 1px solid #000;
+  border: 2px solid #000;
   text-align: left;
   margin: 30px 0;
   padding: 15px;
-  background: #000;
   transition: .2s linear;
 }
 
 .data-user-button:hover {
-  opacity: .8;
+  border-color: #fff;
+  background: #000;
   transition: .2s linear;
+}
+
+.data-user-button:hover span {
+  color: #fff;
 }
 
 .data-user-button span {
   font-size: 18px;
   font-family: var(--font-medium);
   text-transform: uppercase;
-  color: #fff;
 }
 
+.data-user-delivery {
+  margin-top: 20px;
+  padding: 40px 0;
+  border-top: 1px solid #D3D7DA;
+  border-bottom: 1px solid #D3D7DA;
+}
+
+.data-user-delivery .delivery__el {
+  font-size: 20px;
+  font-family: var(--font-bold);
+  text-transform: uppercase;
+}
+
+.data-user-payment {
+  margin-top: 40px;
+}
+
+.user-payment__title {
+  font-size: 20px;
+  font-family: var(--font-bold);
+  text-transform: uppercase;
+}
+
+.user-payment-img {
+  margin-top: 30px;
+}
 
 
 
@@ -304,9 +333,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-top: 40px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #D3D7DA;
+  margin: 40px 0 40px;
 }
 
 .data-product-promo span {
@@ -325,4 +352,51 @@
   background: #000;
   text-decoration-color: #fff;
   transition: .2s linear;
+}
+
+.data-product-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-top: 1px solid #D3D7DA;
+  padding-top: 40px;
+}
+
+.product-item-content {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 20px;
+}
+
+.item-content-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.item-content-info__title,
+.item-content-info__price {
+  opacity: .6;
+}
+
+.item-content-info__title {
+  font-size: 16px;
+  font-family: var(--font-regular);
+}
+
+.item-content-info__price {
+  font-size: 16px;
+  font-family: var(--font-medium);
+}
+
+.item-content-info__size {
+  margin-top: 10px;
+}
+
+.item-content-info__size,
+.item-content-info__color,
+.item-content-info__quantity {
+  font-size: 16px;
+  font-family: var(--font-light);
+  letter-spacing: .05em;
 }
