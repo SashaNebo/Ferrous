@@ -23,16 +23,6 @@ window.addEventListener('click', event => {
       <div class="product-container">
         <div class="product-main">
           <ol class="product-menu">
-            <li><span class='txt' href="">Men</span>
-            </li>
-            <span>/</span>
-            <li>
-              <span class='txt' href="#">Women</span>
-            </li>
-            <span>/</span>
-            <li>
-              <span class='txt' href="">Kids</span>
-            </li>
             <li id='back'><span class='product-btn-back' href="">
                 <svg class='icon' height="16px" width="16px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-94.52 -94.52 661.65 661.65" xml:space="preserve" stroke="#000000" stroke-width="47.2615">
                   <g id="SVGRepo_bgCarrier" stroke-width="0"></g>

@@ -118,4 +118,4 @@ const renderMain = () => {
   checkLiked()
 }
 
-// renderMain()
+renderMain()

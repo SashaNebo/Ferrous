@@ -300,6 +300,9 @@ const openBag = () => {
 
   const counterButtons = Array.from(document.querySelectorAll('[data-counter]'))
   counterButtons.forEach(b => b.addEventListener('click', quanityBagController))
+
+  const buttonCheckout = document.querySelector('.bag-checkout-btn')
+  buttonCheckout.addEventListener('click', renderCheckout)
 }
 
 const addToBag = event => {
@@ -461,14 +464,21 @@ const quanityBagController = event => {
 }
 
 const moveModal = event => {
+  const modal = document.querySelector('#modal')
   if (
     !event.target.closest('.modal__box') ||
     event.target.closest('.modal-close')
   ) {
-    document.querySelector('#modal').remove()
+    modal.remove()
   } else if (event.target.closest('.view-bag-btn')) {
-    document.querySelector('#modal').remove()
-    bagBtn.classList.add('active-button')
+    modal.remove()
+    document.querySelector('[data-active]').remove()
     openBag()
+    bagButton.classList.add('active-button')
+  } else if (event.target.closest('.join-free-btn')) {
+    modal.remove()
+    document.querySelector('[data-active]').remove()
+    openProfile()
+    profileButton.classList.add('active-button')
   }
 }
