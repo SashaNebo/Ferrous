@@ -18,7 +18,6 @@
   width: 100%;
   max-width: 720px;
   margin-left: auto;
-  /* animation: moveLeft 1s ease-in-out; */
 }
 
 .bag-left .w {
@@ -273,12 +272,11 @@ p .bag-info-price,
   transition: .15s linear;
 }
 
-/* --- */
+/* bag-checkout */
 
 .bag-checkout {
   width: 85%;
   margin-left: auto;
-  /* animation: moveRight 1s ease-in-out; */
 }
 
 .bag-checkout-content {

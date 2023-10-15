@@ -9,8 +9,6 @@ if (localStorage.getItem('product')) {
   product = JSON.parse(localStorage.getItem('product'))
   countWishlistButton()
   countBagButton()
-
-  console.log(product)
 }
 
 const saveToLocalStorage = () => {

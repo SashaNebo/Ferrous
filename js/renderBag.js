@@ -421,7 +421,7 @@ const countBagButton = () => {
 
   countBag > 0
     ? (bagButton.textContent = `cart ${countBag}`)
-    : (bagButton.textContent = 'cart')
+    : (bagButton.textContent = `cart`)
 
   return countBag
 }

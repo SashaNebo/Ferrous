@@ -257,21 +257,13 @@
 }
 
 
-
-
-
-/* --- */
-
-
-
+/* checkout-data-product */
 
 
 .checkout-data-product {
   width: 100%;
   max-width: 400px;
 }
-
-.data-product-order {}
 
 .product-order-top {
   display: flex;

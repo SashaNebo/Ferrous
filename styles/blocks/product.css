@@ -67,7 +67,8 @@
   gap: 1px;
 }
 
-/* --- */
+/* product-sidebar */
+
 .product-sidebar {
   width: 100%;
   max-width: 25%;
@@ -115,7 +116,6 @@
   margin-top: 40px;
 }
 
-/* --- */
 .product-info {
   margin: 80px 0;
 }

@@ -1,4 +1,6 @@
-.footer {}
+.footer {
+  margin-top: 50px;
+}
 
 .footer-top {
   padding: 40px;
@@ -34,7 +36,7 @@
   width: 30px;
 }
 
-/* --- */
+/* footer-middle */
 
 .footer-middle {
   width: 100%;
@@ -76,7 +78,7 @@
   border-bottom: none;
 }
 
-/* --- */
+/* footer-bottom */
 
 .footer-bottom {
   display: flex;
