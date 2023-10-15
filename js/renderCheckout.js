@@ -125,7 +125,7 @@ const renderCheckout = event => {
         <img src="${item.imgSrc[0]}" alt="" class='item-content__img'>
         <div class="item-content-info">
           <h6 class="item-content-info__title">${item.title}</h6>
-          <p class="item-content-info__price">$${item.price}</p>
+          <p class="item-content-info__price">${item.price}</p>
           <div class="item-content-info__size">Size: ${item.size}</div>
           <div class="item-content-info__color">Color: ${item.colors}</div>
           <div class="item-content-info__quantity">Quantity: ${item.count}</div>

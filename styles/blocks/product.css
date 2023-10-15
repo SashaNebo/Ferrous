@@ -23,8 +23,9 @@
 }
 
 .product-menu li {
-  padding: 5px 5px;
+  padding: 8px 5px;
   cursor: pointer;
+  border: 1px solid #000;
 }
 
 .product-menu li:hover {
@@ -34,7 +35,7 @@
 
 .product-menu li:hover .txt {
   color: #fff;
-  border-bottom: 1px solid #fff;
+  text-decoration: none;
   transition: .1s linear;
 }
 
@@ -56,9 +57,8 @@
 }
 
 .product-menu li .txt {
-  font-family: var(--font-light);
-  font-size: 16px;
-  border-bottom: 1px solid black;
+  font-family: var(--font-regular);
+  font-size: 20px;
 }
 
 .product-main-img {
