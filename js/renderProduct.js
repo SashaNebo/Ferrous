@@ -5,12 +5,7 @@ window.addEventListener('click', event => {
   const selectedProduct = event.target.closest('[data-id]')
   if (selectedProduct === null) return
 
-  if (
-    activeSection.id === 'product' ||
-    event.target.closest('.wish-button') ||
-    event.target.closest('.bag-buttons-remove')
-  )
-    return
+  if (activeSection.id === 'product' || event.target.closest('.wish-button') || event.target.closest('.bag-buttons-remove')) return
 
   const renderProduct = () => {
     let activeInfo
@@ -270,8 +265,7 @@ window.addEventListener('click', event => {
     const targetButton = event.target.closest('.active-button')
     const activeButton = document.querySelector('.active-button')
 
-    if (!targetButton && activeButton)
-      activeButton.classList.remove('active-button')
+    if (!targetButton && activeButton) activeButton.classList.remove('active-button')
 
     checkLiked()
   }
@@ -290,10 +284,7 @@ window.addEventListener('click', event => {
 
 const moveModal = event => {
   const modal = document.querySelector('#modal')
-  if (
-    !event.target.closest('.modal__box') ||
-    event.target.closest('.modal-close')
-  ) {
+  if (!event.target.closest('.modal__box') || event.target.closest('.modal-close')) {
     modal.remove()
   } else if (event.target.closest('.view-bag-btn')) {
     modal.remove()

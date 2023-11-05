@@ -1,6 +1,6 @@
 let product = [
   {
-    id: 9,
+    id: 1,
     title: 'Takumi Sen',
     price: '$400',
     imgSrc: [
@@ -18,7 +18,7 @@ let product = [
     liked: false,
   },
   {
-    id: 10,
+    id: 2,
     title: 'ITOGO',
     price: '$600',
     imgSrc: [
@@ -36,7 +36,7 @@ let product = [
     liked: false,
   },
   {
-    id: 11,
+    id: 3,
     title: 'Sportswear',
     price: '$280',
     imgSrc: [
@@ -54,7 +54,7 @@ let product = [
     liked: false,
   },
   {
-    id: 12,
+    id: 4,
     title: 'Seeulater',
     price: '$220',
     imgSrc: [
@@ -72,7 +72,7 @@ let product = [
     liked: false,
   },
   {
-    id: 13,
+    id: 5,
     title: '4DFWD',
     price: '$200',
     imgSrc: [
@@ -90,7 +90,7 @@ let product = [
     liked: false,
   },
   {
-    id: 14,
+    id: 6,
     title: 'Roverend',
     price: '$200',
     imgSrc: [
@@ -108,7 +108,7 @@ let product = [
     liked: false,
   },
   {
-    id: 15,
+    id: 7,
     title: 'ULTRABOOST LIGHT',
     price: '$190',
     imgSrc: [
@@ -126,7 +126,7 @@ let product = [
     liked: false,
   },
   {
-    id: 16,
+    id: 8,
     title: 'Rivalry',
     price: '$300',
     imgSrc: [
@@ -144,7 +144,7 @@ let product = [
     liked: false,
   },
   {
-    id: 17,
+    id: 9,
     title: 'Court Slip-On',
     price: '$180',
     imgSrc: [
@@ -162,7 +162,7 @@ let product = [
     liked: false,
   },
   {
-    id: 18,
+    id: 10,
     title: 'Orketro',
     price: '$160',
     imgSrc: [
@@ -180,7 +180,7 @@ let product = [
     liked: false,
   },
   {
-    id: 19,
+    id: 11,
     title: 'Harden Volume',
     price: '$160',
     imgSrc: [
@@ -198,7 +198,7 @@ let product = [
     liked: false,
   },
   {
-    id: 20,
+    id: 12,
     title: 'Cushion',
     price: '$150',
     imgSrc: [
@@ -216,7 +216,7 @@ let product = [
     liked: false,
   },
   {
-    id: 21,
+    id: 13,
     title: 'Mahomes 1 Impact FLX',
     price: '$140',
     imgSrc: [
@@ -234,7 +234,7 @@ let product = [
     liked: false,
   },
   {
-    id: 21,
+    id: 14,
     title: 'Stan Smith Crepe',
     price: '$145',
     imgSrc: [
@@ -252,7 +252,7 @@ let product = [
     liked: false,
   },
   {
-    id: 22,
+    id: 15,
     title: 'Adifom Climacool',
     price: '$120',
     imgSrc: [
@@ -270,7 +270,7 @@ let product = [
     liked: false,
   },
   {
-    id: 23,
+    id: 16,
     title: 'Rivalry Low TR',
     price: '$110',
     imgSrc: [
