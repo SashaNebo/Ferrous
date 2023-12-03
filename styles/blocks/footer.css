@@ -3,37 +3,11 @@
 }
 
 .footer-top {
-  padding: 40px;
-  background: rgb(237, 231, 52);
+  padding: 60px;
+  background: #383838;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-}
-
-.footer-top__title {
-  font-size: 26px;
-  font-family: var(--font-bold);
-  text-transform: uppercase;
-}
-
-.footer-top__button {
-  display: flex;
-  background: #000;
-  align-items: center;
-  padding: 5px 15px;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.footer-top__button span {
-  color: #fff;
-  font-size: 16px;
-  font-family: var(--font-regular);
-}
-
-.footer-top__button img {
-  width: 30px;
 }
 
 /* footer-middle */
@@ -46,7 +20,7 @@
 
 .footer-middle-lists {
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
 }
 
 .lists-el {

@@ -23,8 +23,8 @@
 /* Main */
 
 .main {
+  margin-bottom: 150px;
   padding-top: 40px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   animation: moveBottom 1s ease-in-out;
 }
 
@@ -98,10 +98,13 @@
 
 .grid-item {
   border: 1px solid rgba(0, 0, 255, 0);
+  transform: translateY(0);
   cursor: pointer;
+  transition: all .15s linear;
 }
 
 .grid-item:hover {
+  transform: translateY(-10px);
   border: 1px solid #000;
 }
 
