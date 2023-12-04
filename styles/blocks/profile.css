@@ -262,3 +262,29 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+@media (max-width: 950px) {
+  .profile {
+    grid-template-columns: 1fr;
+  }
+
+  .aside {
+    display: none;
+  }
+
+
+  .sign-in-content {
+    margin-left: 0;
+    padding: 0 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+  }
+}
+
+@media (max-width: 550px) {
+  .sign-in-content {
+    padding: 0 30px;
+  }
+}
