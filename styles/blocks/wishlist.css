@@ -87,3 +87,39 @@
   font-size: 14px;
   font-family: var(--font-light);
 }
+
+@media (max-width: 950px) {
+  .wishlist-item {
+    max-width: 100%;
+  }
+
+  .wishlist-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+
+  .wishlist-items {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+  }
+
+  .wishlist-item {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 350px) {
+
+  .wishlist-title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 325px) {
+  .wishlist-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
