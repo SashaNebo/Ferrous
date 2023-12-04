@@ -306,9 +306,14 @@
   .header-top-el {
     flex-wrap: wrap;
   }
+
+  .product-card-assets__icon svg {
+    width: 25px;
+    height: 25px;
+  }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 350px) {
   .main-container-grid {
     grid-template-columns: repeat(1, 100%);
   }
