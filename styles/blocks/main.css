@@ -277,6 +277,11 @@
 }
 
 @media (max-width: 750px) {
+
+  .main {
+    margin-bottom: 100px;
+  }
+
   .header-bottom {
     display: flex;
     justify-content: center;
@@ -291,8 +296,6 @@
     justify-content: flex-start;
   }
 }
-
-@media (max-width: 550px) {}
 
 @media (max-width: 550px) {
   .header-bottom-menu {
@@ -311,6 +314,10 @@
     width: 25px;
     height: 25px;
   }
+
+  div.size-selector {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 350px) {
@@ -321,5 +328,9 @@
   .grid-item {
     width: 80%;
     justify-self: center;
+  }
+
+  .bag-btn {
+    max-width: 100%;
   }
 }
