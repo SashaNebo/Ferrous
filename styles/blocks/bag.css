@@ -462,4 +462,8 @@ p .bag-info-price,
   .bag-items-content__top {
     margin-bottom: 20px;
   }
+
+  .bag-checkout-btn {
+    width: 100%;
+  }
 }
