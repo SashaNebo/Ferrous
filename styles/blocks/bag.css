@@ -423,14 +423,15 @@ p .bag-info-price,
 }
 
 @media (max-width: 675px) {
-  .bag-left-items {
-    align-items: center;
-  }
 
   .bag-items-content {
     width: 80%;
     grid-template-columns: 1fr;
     row-gap: 10px;
+  }
+
+  .bag-left-items {
+    align-items: center;
   }
 
   .bag-items-content-right {
@@ -450,7 +451,7 @@ p .bag-info-price,
   }
 
   .bag-items-content-right {
-    width: 110%;
+    width: 100%;
     padding: 8px;
     box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
   }
